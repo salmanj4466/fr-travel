@@ -59,6 +59,7 @@ const styles = StyleSheet.create({
     fontWeight: 700,
     textDecoration: "underline",
     marginBottom: 20,
+    marginTop: 20,
   },
   greeting: { fontSize: 11, marginBottom: 14 },
   paragraph: { fontSize: 10.5, marginBottom: 14 },
