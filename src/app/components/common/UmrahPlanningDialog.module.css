@@ -1,0 +1,87 @@
+.dialog :global(.ant-modal-container) {
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.title {
+  margin: 0;
+  padding-right: 28px;
+  color: var(--fr-navy);
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.intro {
+  margin: 8px 0 24px;
+  color: #66706c;
+  line-height: 1.7;
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 20px;
+}
+
+.form :global(.ant-form-item-label > label) {
+  color: var(--fr-navy);
+  font-weight: 600;
+}
+
+.form :global(.ant-input),
+.form :global(.ant-select) {
+  height: 44px;
+  border-radius: 10px;
+}
+
+.form :global(textarea.ant-input) {
+  height: auto;
+  min-height: 112px;
+  resize: vertical;
+}
+
+.form :global(.ant-input:not(.ant-input-status-error):hover),
+.form :global(.ant-input:not(.ant-input-status-error):focus),
+.form :global(.ant-select:not(.ant-select-status-error):hover),
+.form :global(.ant-select-focused:not(.ant-select-status-error)) {
+  border-color: var(--fr-accent);
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 4px;
+}
+
+.feedback {
+  margin-bottom: 20px;
+}
+
+.actions .submit {
+  border-color: var(--fr-navy);
+  background: var(--fr-navy);
+}
+
+.actions .submit:not(:disabled):hover {
+  border-color: var(--fr-navy-hover);
+  background: var(--fr-navy-hover);
+}
+
+.actions :global(.ant-btn) {
+  min-height: 44px;
+  border-radius: 999px;
+  padding-inline: 24px;
+  font-weight: 600;
+}
+
+@media (max-width: 575px) {
+  .dialog :global(.ant-modal-container) {
+    padding: 22px 18px;
+  }
+
+  .fields {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+}
