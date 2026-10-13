@@ -1,0 +1,64 @@
+.shop-hero {
+  background-image: url("/images/pexels-earth-photart-2149767641-35332386.jpg");
+  background-position: 72% 43%;
+  background-size: cover;
+}
+
+.shop-collection {
+  background-image: linear-gradient(rgba(251,250,247,.96), rgba(251,250,247,.96)), url("/images/madina.jpg");
+  background-position: center top;
+  background-size: cover;
+}
+
+.shop-product {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.shop-product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 48px rgba(36, 50, 44, 0.12);
+}
+
+.product-sprite {
+  aspect-ratio: 1;
+  border-radius: .75rem;
+  background-image: url("/images/umrah-shop-products.png");
+  background-repeat: no-repeat;
+  background-size: 400% 300%;
+}
+
+.product-sprite-1 { background-position: 0 0; }
+.product-sprite-2 { background-position: 33.333% 0; }
+.product-sprite-3 { background-position: 66.667% 0; }
+.product-sprite-4 { background-position: 100% 0; }
+.product-sprite-5 { background-position: 0 50%; }
+.product-sprite-6 { background-position: 33.333% 50%; }
+.product-sprite-7 { background-position: 66.667% 50%; }
+.product-sprite-8 { background-position: 100% 50%; }
+.product-sprite-9 { background-position: 0 100%; }
+.product-sprite-10 { background-position: 33.333% 100%; }
+.product-sprite-11 { background-position: 66.667% 100%; }
+.product-sprite-12 { background-position: 100% 100%; }
+
+.shop-order-cta {
+  background-color: #f0f3eb;
+  background-image: linear-gradient(90deg, rgba(240,243,235,.98), rgba(240,243,235,.88)), url("/images/pexels-afiography-30429165.jpg");
+  background-position: right center;
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .shop-hero {
+    background-position: 61% center;
+  }
+
+  .shop-hero > div:first-child {
+    background: linear-gradient(90deg, rgba(251,249,243,.98), rgba(251,249,243,.82) 76%, rgba(251,249,243,.48));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shop-product {
+    transition: none;
+  }
+}

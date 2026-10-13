@@ -1,0 +1,93 @@
+.contact-hero {
+  background-image: url("/images/pexels-earth-photart-2149767641-35332386.jpg");
+  background-position: 72% 43%;
+  background-size: cover;
+}
+
+.contact-method-card {
+  box-shadow: 0 12px 35px rgba(38, 50, 45, 0.045);
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.contact-method-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 45px rgba(38, 50, 45, 0.1);
+}
+
+.contact-form .ant-form-item-label > label {
+  color: var(--fr-navy);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.contact-form .ant-form-item-label > label::after {
+  display: inline-block;
+  margin-left: 3px;
+  color: #b04a3c;
+  content: "*";
+}
+
+.contact-form .ant-input,
+.contact-form .ant-select-selector {
+  border-color: #dadfdc !important;
+  border-radius: 0.6rem !important;
+  background: #fcfcfb !important;
+  box-shadow: none !important;
+}
+
+.contact-form textarea.ant-input {
+  min-height: 138px;
+  padding-top: 0.8rem;
+}
+
+.contact-form .ant-input:focus,
+.contact-form .ant-input:hover,
+.contact-form .ant-select:hover .ant-select-selector,
+.contact-form .ant-select-focused .ant-select-selector {
+  border-color: var(--fr-accent) !important;
+}
+
+.contact-map {
+  position: relative;
+  background-color: #eef0eb;
+  background-image:
+    linear-gradient(33deg, transparent 46%, rgba(255,255,255,.95) 47%, rgba(255,255,255,.95) 52%, transparent 53%),
+    linear-gradient(145deg, transparent 42%, rgba(255,255,255,.9) 43%, rgba(255,255,255,.9) 49%, transparent 50%),
+    linear-gradient(90deg, transparent 48%, rgba(207,214,210,.7) 49%, rgba(207,214,210,.7) 51%, transparent 52%);
+  background-size: 150px 120px, 190px 150px, 110px 100%;
+}
+
+.contact-map::before {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(90deg, rgba(122,172,119,.14) 1px, transparent 1px), linear-gradient(rgba(122,172,119,.14) 1px, transparent 1px);
+  background-size: 42px 42px;
+  content: "";
+}
+
+.contact-map > span {
+  position: relative;
+  z-index: 1;
+}
+
+.contact-support {
+  background-image: linear-gradient(90deg, #fff 55%, rgba(255,255,255,.72)), url("/images/pexels-afiography-30429165.jpg");
+  background-position: right center;
+  background-size: cover;
+}
+
+@media (max-width: 640px) {
+  .contact-hero {
+    background-position: 62% center;
+  }
+
+  .contact-hero > div:first-child {
+    background: linear-gradient(90deg, rgba(251,249,243,.98), rgba(251,249,243,.82) 76%, rgba(251,249,243,.48));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-method-card {
+    transition: none;
+  }
+}

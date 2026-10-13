@@ -6,6 +6,8 @@
   --fr-navy: #003f63;
   --fr-gold: #c99a00;
   --fr-light-blue: #65c7e5;
+  --fr-accent: #16799b;
+  --fr-navy-hover: #0b6f94;
 }
 
 @theme inline {

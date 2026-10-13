@@ -31,9 +31,13 @@ export default function DashboardShell({ children }: { children: ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState<boolean | null>(null);
 
   useEffect(() => {
-    if (localStorage.getItem("isLoggedIn") !== "true") {
+    const loggedIn = localStorage.getItem("isLoggedIn") === "true";
+    setIsLoggedIn(loggedIn);
+
+    if (!loggedIn) {
       router.replace("/login");
     }
   }, [router]);
@@ -42,16 +46,13 @@ export default function DashboardShell({ children }: { children: ReactNode }) {
     setIsSidebarOpen(false);
   }, [pathname]);
 
-  const isLoggedIn =
-    typeof window !== "undefined" &&
-    localStorage.getItem("isLoggedIn") === "true";
-
   const handleLogout = () => {
     localStorage.removeItem("isLoggedIn");
+    setIsLoggedIn(false);
     router.replace("/login");
   };
 
-  if (!isLoggedIn) {
+  if (isLoggedIn !== true) {
     return (
       <div className="flex min-h-screen items-center justify-center">
         <Spin size="large" />
